@@ -31,6 +31,40 @@
 								$("#dice6").show();
 						},(50*$i));
 					}
+					setTimeout(function(){
+						$("#r1").click(function(){
+							if($("#dice6").is(":visible"))
+							{
+								$("#r1").hide();
+								$("#wr1").show();
+								$("#rd1").show();
+							}
+						});
+						$("#r2").click(function(){
+							if($("#dice6").is(":visible"))
+							{
+								$("#r2").hide();
+								$("#wr1").show();
+								$("#rd2").show();
+							}	
+						});
+						$("#r3").click(function(){
+							if($("#dice6").is(":visible"))
+							{
+								$("#r3").hide();
+								$("#wr3").show();
+								$("#rd1").show();
+							}	
+						});
+						$("#r4").click(function(){
+							if($("#dice6").is(":visible"))
+							{
+								$("#r4").hide();
+								$("#wr4").show();
+								$("#rd1").show();
+							}	
+						});
+					},1000);
 				});
 			});
 		</script>
@@ -50,8 +84,8 @@
 				<tr>
 					<tr>
 						<td><img src="blue_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b1"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b2"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b1"><img src="white_circle.png" id="wb1"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b2"><img src="white_circle.png" id="wb2"></center></td>
 						<td><img src="blue_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -62,8 +96,8 @@
 				<tr>
 					<tr>
 						<td><img src="blue_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b3"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b4"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b3"><img src="white_circle.png" id="wb3"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="blue_circle.png" id="b4"><img src="white_circle.png" id="wb4"></center></td>
 						<td><img src="blue_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -367,8 +401,8 @@
 				<tr>
 					<tr>
 						<td><img src="green_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g1"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g2"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g1"><img src="white_circle.png" id="wg1"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g2"><img src="white_circle.png" id="wg2"></center></td>
 						<td><img src="green_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -379,8 +413,8 @@
 				<tr>
 					<tr>
 						<td><img src="green_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g3"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g4"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g3"><img src="white_circle.png" id="wg3"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="green_circle.png" id="g4"><img src="white_circle.png" id="wg4"></center></td>
 						<td><img src="green_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -1000,8 +1034,8 @@
 				<tr>
 					<tr>
 						<td><img src="red_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r1"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r2"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r1"><img src="white_circle.png" id="wr1"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r2"><img src="white_circle.png" id="wr2"></center></td>
 						<td><img src="red_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -1012,8 +1046,8 @@
 				<tr>
 					<tr>
 						<td><img src="red_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r3"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r4"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r3"><img src="white_circle.png" id="wr3"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="red_circle.png" id="r4"><img src="white_circle.png" id="wr4"></center></td>
 						<td><img src="red_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -1317,8 +1351,8 @@
 				<tr>
 					<tr>
 						<td><img src="yellow_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y1"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y2"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y1"><img src="white_circle.png" id="wy1"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y2"><img src="white_circle.png" id="wy2"></center></td>
 						<td><img src="yellow_square.png" class="sqr"></td>
 					</tr>
 					<tr>
@@ -1329,8 +1363,8 @@
 				<tr>
 					<tr>
 						<td><img src="yellow_square.png" class="sqr"></td>
-						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y3"></center></td>
-						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y4"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y3"><img src="white_circle.png" id="wy3"></center></td>
+						<td rowspan="2" colspan="2"><center><img src="yellow_circle.png" id="y4"><img src="white_circle.png" id="wy4"></center></td>
 						<td><img src="yellow_square.png" class="sqr"></td>
 					</tr>
 					<tr>
