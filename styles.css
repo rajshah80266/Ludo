@@ -13,9 +13,13 @@
 	color : darkblue;
 }
 
-#dice
+#dice6,#dice5,#dice4,#dice3,#dice2,#dice1
 {
 		border : 1px solid black ;
+}
+#dice5,#dice4,#dice3,#dice2,#dice1
+{
+	display : none;
 }
 
 #rd1,#rd2,#rd3,#rd4,#rd5,#rd6,#rd7,#rd8,#rd9,#rd10,

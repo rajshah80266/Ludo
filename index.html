@@ -3,6 +3,37 @@
 	<head>
 		<title>Ludo</title>
 		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#dice").click(function(){
+					for($i=10;$i>=1;$i--)
+					{
+						setTimeout(function(){
+							$random = Math.floor(Math.random()*6);
+							$("#dice1").hide();
+							$("#dice2").hide();
+							$("#dice3").hide();
+							$("#dice4").hide();
+							$("#dice5").hide();
+							$("#dice6").hide();
+							if($random==0)
+								$("#dice1").show();
+							else if($random==1)
+								$("#dice2").show();
+							else if($random==2)
+								$("#dice3").show();
+							else if($random==3)
+								$("#dice4").show();
+							else if($random==4)
+								$("#dice5").show();
+							else if($random==5)
+								$("#dice6").show();
+						},(50*$i));
+					}
+				});
+			});
+		</script>
 	</head>
 	
 	<body>
@@ -1319,9 +1350,14 @@
 		</div>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<br><br><br><br><br><br><br><br><br>
-		<div>
-			<center><img src="yellow6.png" id="dice"><center>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		<div id="dice">
+			<center><img src="yellow6.png" id="dice6"><center>
+			<center><img src="yellow5.png" id="dice5"><center>
+			<center><img src="yellow4.png" id="dice4"><center>
+			<center><img src="yellow3.png" id="dice3"><center>
+			<center><img src="yellow2.png" id="dice2"><center>
+			<center><img src="yellow1.png" id="dice1"><center>
 		</div>
 	</body>
 </html>
