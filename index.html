@@ -6,62 +6,774 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				$("#dice").click(function(){
+				$("#dicer").click(function(){
+					$("#wdr").hide();
+					
 					for($i=10;$i>=1;$i--)
 					{
 						setTimeout(function(){
 							$random = Math.floor(Math.random()*6);
-							$("#dice1").hide();
-							$("#dice2").hide();
-							$("#dice3").hide();
-							$("#dice4").hide();
-							$("#dice5").hide();
-							$("#dice6").hide();
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#dicer6").hide();
 							if($random==0)
-								$("#dice1").show();
+								$("#dicer1").show();
 							else if($random==1)
-								$("#dice2").show();
+								$("#dicer2").show();
 							else if($random==2)
-								$("#dice3").show();
+								$("#dicer3").show();
 							else if($random==3)
-								$("#dice4").show();
+								$("#dicer4").show();
 							else if($random==4)
-								$("#dice5").show();
+								$("#dicer5").show();
 							else if($random==5)
-								$("#dice6").show();
+								$("#dicer6").show();
 						},(50*$i));
 					}
 					setTimeout(function(){
 						$("#r1").click(function(){
-							if($("#dice6").is(":visible"))
+							if($("#dicer6").is(":visible"))
 							{
 								$("#r1").hide();
+								$("#dicer6").hide();
+								$("#wdr").show();
 								$("#wr1").show();
 								$("#rd1").show();
 							}
 						});
 						$("#r2").click(function(){
-							if($("#dice6").is(":visible"))
+							if($("#dicer6").is(":visible"))
 							{
 								$("#r2").hide();
-								$("#wr1").show();
-								$("#rd2").show();
+								$("#dicer6").hide();
+								$("#wdr").show();
+								$("#wr2").show();
+								$("#rd1").show();
 							}	
 						});
 						$("#r3").click(function(){
-							if($("#dice6").is(":visible"))
+							if($("#dicer6").is(":visible"))
 							{
 								$("#r3").hide();
+								$("#dicer6").hide();
+								$("#wdr").show();
 								$("#wr3").show();
 								$("#rd1").show();
 							}	
 						});
 						$("#r4").click(function(){
-							if($("#dice6").is(":visible"))
+							if($("#dicer6").is(":visible"))
 							{
 								$("#r4").hide();
+								$("#dicer6").hide();
+								$("#wdr").show();
 								$("#wr4").show();
 								$("#rd1").show();
+							}	
+						});
+						/*for($z=1;$z<=52;$z++)
+						{
+							$z=1;
+							$y=parseInt($z);
+							$s="#rd"+$y;
+							$($s).click(function(){
+								$($s).hide();
+								$y=parseInt(parseInt($z)+parseInt($random)+parseInt(1));
+								$s='#rd'+$y;
+								$($s).show();
+							});
+						}*/
+						
+						$("#rd1").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd1").hide();
+							$y=parseInt(parseInt($random)+parseInt(2));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						
+						$("#rd2").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd2").hide();
+							$y=parseInt(parseInt($random)+parseInt(3));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd3").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd3").hide();
+							$y=parseInt(parseInt($random)+parseInt(4));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd4").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd4").hide();
+							$y=parseInt(parseInt($random)+parseInt(5));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd5").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd5").hide();
+							$y=parseInt(parseInt($random)+parseInt(6));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd6").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd6").hide();
+							$y=parseInt(parseInt($random)+parseInt(7));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd7").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd7").hide();
+							$y=parseInt(parseInt($random)+parseInt(8));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd8").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd8").hide();
+							$y=parseInt(parseInt($random)+parseInt(9));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd9").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd9").hide();
+							$y=parseInt(parseInt($random)+parseInt(10));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd10").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd10").hide();
+							$y=parseInt(parseInt($random)+parseInt(11));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd11").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd11").hide();
+							$y=parseInt(parseInt($random)+parseInt(12));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd12").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd12").hide();
+							$y=parseInt(parseInt($random)+parseInt(13));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd13").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd13").hide();
+							$y=parseInt(parseInt($random)+parseInt(14));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd14").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd14").hide();
+							$y=parseInt(parseInt($random)+parseInt(15));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd15").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd15").hide();
+							$y=parseInt(parseInt($random)+parseInt(16));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd16").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd16").hide();
+							$y=parseInt(parseInt($random)+parseInt(17));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd17").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd17").hide();
+							$y=parseInt(parseInt($random)+parseInt(18));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd18").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd18").hide();
+							$y=parseInt(parseInt($random)+parseInt(19));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd19").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd19").hide();
+							$y=parseInt(parseInt($random)+parseInt(20));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd20").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd20").hide();
+							$y=parseInt(parseInt($random)+parseInt(21));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd21").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd21").hide();
+							$y=parseInt(parseInt($random)+parseInt(22));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd22").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd22").hide();
+							$y=parseInt(parseInt($random)+parseInt(23));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd23").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd23").hide();
+							$y=parseInt(parseInt($random)+parseInt(24));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd24").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd24").hide();
+							$y=parseInt(parseInt($random)+parseInt(25));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd25").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd25").hide();
+							$y=parseInt(parseInt($random)+parseInt(26));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd26").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd26").hide();
+							$y=parseInt(parseInt($random)+parseInt(27));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd27").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd27").hide();
+							$y=parseInt(parseInt($random)+parseInt(28));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd28").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd28").hide();
+							$y=parseInt(parseInt($random)+parseInt(29));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd29").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd29").hide();
+							$y=parseInt(parseInt($random)+parseInt(30));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd30").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd30").hide();
+							$y=parseInt(parseInt($random)+parseInt(31));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd31").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd31").hide();
+							$y=parseInt(parseInt($random)+parseInt(32));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd32").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd32").hide();
+							$y=parseInt(parseInt($random)+parseInt(33));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd33").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd33").hide();
+							$y=parseInt(parseInt($random)+parseInt(34));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd34").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd34").hide();
+							$y=parseInt(parseInt($random)+parseInt(35));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd35").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd35").hide();
+							$y=parseInt(parseInt($random)+parseInt(36));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd36").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd36").hide();
+							$y=parseInt(parseInt($random)+parseInt(37));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd37").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd37").hide();
+							$y=parseInt(parseInt($random)+parseInt(38));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd38").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd38").hide();
+							$y=parseInt(parseInt($random)+parseInt(39));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd39").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd39").hide();
+							$y=parseInt(parseInt($random)+parseInt(40));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd40").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd40").hide();
+							$y=parseInt(parseInt($random)+parseInt(41));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd41").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd41").hide();
+							$y=parseInt(parseInt($random)+parseInt(42));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd42").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd42").hide();
+							$y=parseInt(parseInt($random)+parseInt(43));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd43").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd43").hide();
+							$y=parseInt(parseInt($random)+parseInt(44));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd44").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd44").hide();
+							$y=parseInt(parseInt($random)+parseInt(45));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd45").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd45").hide();
+							$y=parseInt(parseInt($random)+parseInt(46));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd46").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd46").hide();
+							$y=parseInt(parseInt($random)+parseInt(47));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd47").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd47").hide();
+							$y=parseInt(parseInt($random)+parseInt(48));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd48").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd48").hide();
+							$y=parseInt(parseInt($random)+parseInt(49));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd49").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd49").hide();
+							$y=parseInt(parseInt($random)+parseInt(50));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd50").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd50").hide();
+							$y=parseInt(parseInt($random)+parseInt(51));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd51").click(function(){
+							$("#dicer1").hide();
+							$("#dicer2").hide();
+							$("#dicer3").hide();
+							$("#dicer4").hide();
+							$("#dicer5").hide();
+							$("#wdr").show();
+							$("#rd51").hide();
+							$y=parseInt(parseInt($random)+parseInt(52));
+							$s='#rd'+$y;
+							$($s).show();
+						});
+						$("#rd52").click(function(){
+							if($random<5)
+							{
+								$("#dicer1").hide();
+								$("#dicer2").hide();
+								$("#dicer3").hide();
+								$("#dicer4").hide();
+								$("#dicer5").hide();
+								$("#wdr").show();
+								$("#rd52").hide();
+								$y=parseInt(parseInt($random)+parseInt(53));
+								$s='#rd'+$y;
+								$($s).show();
+							}	
+						});
+						$("#rd53").click(function(){
+							if($random<4)
+							{
+								$("#dicer1").hide();
+								$("#dicer2").hide();
+								$("#dicer3").hide();
+								$("#dicer4").hide();
+								$("#dicer5").hide();
+								$("#wdr").show();
+								$("#rd53").hide();
+								$y=parseInt(parseInt($random)+parseInt(54));
+								$s='#rd'+$y;
+								$($s).show();
+							}	
+						});
+						$("#rd54").click(function(){
+							if($random<3)
+							{
+								
+								$("#dicer1").hide();
+								$("#dicer2").hide();
+								$("#dicer3").hide();
+								$("#dicer4").hide();
+								$("#dicer5").hide();
+								$("#wdr").show();
+								$("#rd54").hide();
+								$y=parseInt(parseInt($random)+parseInt(55));
+								$s='#rd'+$y;
+								$($s).show();
+							}	
+						});
+						$("#rd55").click(function(){
+							if($random<2)
+							{
+								$("#dicer1").hide();
+								$("#dicer2").hide();
+								$("#dicer3").hide();
+								$("#dicer4").hide();
+								$("#dicer5").hide();
+								$("#rd55").hide();
+								$("#wdr").show();
+								$y=parseInt(parseInt($random)+parseInt(56));
+								$s='#rd'+$y;
+								$($s).show();
+							}	
+						});
+						$("#rd56").click(function(){
+							if($random<1)
+							{
+								$("#dicer1").hide();
+								$("#dicer2").hide();
+								$("#dicer3").hide();
+								$("#dicer4").hide();
+								$("#dicer5").hide();
+								$("#wdr").show();
+								$("#rd56").hide();
+								$y=parseInt(parseInt($random)+parseInt(57));
+								$s='#rd'+$y;
+								$($s).show();
 							}	
 						});
 					},1000);
@@ -71,6 +783,15 @@
 	</head>
 	
 	<body>
+		<div id="diceg">
+			<center><img src="green6.png" id="diceg6"><center>
+			<center><img src="green5.png" id="diceg5"><center>
+			<center><img src="green4.png" id="diceg4"><center>
+			<center><img src="green3.png" id="diceg3"><center>
+			<center><img src="green2.png" id="diceg2"><center>
+			<center><img src="green1.png" id="diceg1"><center>
+			<center><img src="white_square.png" id="wdg" style="width : 15%"><center>
+		</div>
 		<div>
 			<table style="float:left">
 				<tr>
@@ -120,7 +841,7 @@
 						<div class="container">
 							<img src="white_square.png" class="sqr">
 							<div class="centered">
-								<img src="red_circle.png" id="rd24">
+								<img src="red_circle.png" id="rd24" id="rd"[24]>
 							</div>
 							<div class="centered">
 								<img src="green_circle.png" id="gd24">
@@ -215,7 +936,7 @@
 				<tr>
 					<td>
 						<div class="container">
-							<img src="white_square.png" class="sqr">
+							<img src="star.png" class="sqr">
 							<div class="centered">
 								<img src="red_circle.png" id="rd22">
 							</div>
@@ -635,7 +1356,7 @@
 					</td>
 					<td>
 						<div class="container">
-							<img src="white_square.png" class="sqr">
+							<img src="star.png" class="sqr">
 							<div class="centered">
 								<img src="red_circle.png" id="rd9">
 							</div>
@@ -706,7 +1427,7 @@
 			<table style="float:left">
 				<tr>
 					<td>
-						<img src="white_square.png" class="sqr">
+						<img src="black_square.png" class="sqr">
 					</td>
 					<td>
 						<div class="container">
@@ -716,7 +1437,7 @@
 							</div>
 						</div>					
 					</td>
-					<td><img src="white_square.png" class="sqr"></td>
+					<td><img src="black_square.png" class="sqr"></td>
 				</tr>
 				<tr>
 					<td>
@@ -727,7 +1448,7 @@
 							</div>
 						</div>
 					</td>
-					<td><img src="white_square.png" class="sqr"></td>
+					<td><img src="black_square.png" class="sqr"></td>
 					<td>
 						<div class="container">
 							<img src="yellow_square.png" class="sqr">
@@ -738,7 +1459,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><img src="white_square.png" class="sqr"></td>
+					<td><img src="black_square.png" class="sqr"></td>
 					<td>
 						<div class="container">
 							<img src="red_square.png" class="sqr">
@@ -747,7 +1468,7 @@
 							</div>
 						</div>
 					</td>
-					<td><img src="white_square.png" class="sqr"></td>
+					<td><img src="black_square.png" class="sqr"></td>
 				</tr>
 			</table>
 			<table style="float:left">
@@ -805,7 +1526,7 @@
 					</td>
 					<td>
 						<div class="container">
-							<img src="white_square.png" class="sqr">
+							<img src="star.png" class="sqr">
 							<div class="centered">
 								<img src="red_circle.png" id="rd35">
 							</div>
@@ -1225,7 +1946,7 @@
 					</td>
 					<td>
 						<div class="container">
-							<img src="white_square.png" class="sqr">
+							<img src="star.png" class="sqr">
 							<div class="centered">
 								<img src="red_circle.png" id="rd48">
 							</div>
@@ -1385,13 +2106,14 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<br><br><br><br><br><br><br><br><br><br><br><br>
-		<div id="dice">
-			<center><img src="yellow6.png" id="dice6"><center>
-			<center><img src="yellow5.png" id="dice5"><center>
-			<center><img src="yellow4.png" id="dice4"><center>
-			<center><img src="yellow3.png" id="dice3"><center>
-			<center><img src="yellow2.png" id="dice2"><center>
-			<center><img src="yellow1.png" id="dice1"><center>
+		<div id="dicer">
+			<center><img src="red6.png" id="dicer6"><center>
+			<center><img src="red5.png" id="dicer5"><center>
+			<center><img src="red4.png" id="dicer4"><center>
+			<center><img src="red3.png" id="dicer3"><center>
+			<center><img src="red2.png" id="dicer2"><center>
+			<center><img src="red1.png" id="dicer1"><center>
+			<center><img src="white_square.png" id="wdr" style="width : 15%"><center>
 		</div>
 	</body>
 </html>
